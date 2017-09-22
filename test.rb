@@ -1,3 +1,6 @@
+$LOAD_PATH << File.expand_path('../lib', __FILE__)
+require 'gpio_zero'
+
 gpio = GpioZero.new
 led = gpio.LED(4)
 
