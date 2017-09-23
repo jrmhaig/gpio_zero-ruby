@@ -11,10 +11,9 @@ RSpec.describe GpioZero::OutputDevice do
       expect(gpio.output_device(2, initial_value: true).state).to be_truthy
     end
     it 'maintains the previous state' do
-#      gpio.output_device(2, initial_value: false)
-#      expect(gpio.output_device(2).state).to be_falsey
-      a = gpio.output_device(2, initial_value: true)
-      b = gpio.output_device(2)
+      gpio.output_device(2, initial_value: false)
+      expect(gpio.output_device(2).state).to be_falsey
+      gpio.output_device(2, initial_value: true)
       expect(gpio.output_device(2).state).to be_truthy
     end
   end
