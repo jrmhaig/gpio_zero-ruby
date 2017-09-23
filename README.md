@@ -1,7 +1,7 @@
 # GPIO Zero for Ruby
 
 An attempt to create GPIO Zero
-[GPIO Zero](https://github.com/joan2937/pigpio) for Ruby. Very basic at the
+[GPIO Zero](https://gpiozero.readthedocs.io/en/stable/) for Ruby. Very basic at the
 moment!
 
 ## Getting started
