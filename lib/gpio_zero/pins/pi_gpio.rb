@@ -14,15 +14,15 @@ class GpioZero
       end
 
       def set_mode pin, mode
-        _set_mode @pi, pin, mode 
+        _set_mode @pi, pin, mode
       end
 
       def write pin, state
-        _gpio_write @pi, pin, state
+        _gpio_write @pi, pin, state ? 1 : 0
       end
 
       def read pin
-        _gpio_read @pi, pin
+        (_gpio_read @pi, pin) == 1
       end
 
       private
