@@ -1,4 +1,4 @@
 class GpioZero
-  class LED < OutputDevice
+  class LED < DigitalOutputDevice
   end
 end
