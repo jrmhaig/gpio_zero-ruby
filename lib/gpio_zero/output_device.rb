@@ -13,5 +13,13 @@ class GpioZero
     def state
       @device.read @pin
     end
+
+    def on
+      @device.write @pin, true
+    end
+
+    def off
+      @device.write @pin, false
+    end
   end
 end

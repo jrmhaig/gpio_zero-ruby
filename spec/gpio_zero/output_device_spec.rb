@@ -17,4 +17,32 @@ RSpec.describe GpioZero::OutputDevice do
       expect(gpio.output_device(2).state).to be_truthy
     end
   end
+
+  describe '#on' do
+    it 'sets the device to high' do
+      dev = gpio.output_device(2, initial_value: false)
+      dev.on
+      expect(dev.state).to be_truthy
+    end
+
+    it 'keeps the device high' do
+      dev = gpio.output_device(2, initial_value: true)
+      dev.on
+      expect(dev.state).to be_truthy
+    end
+  end
+
+  describe '#off' do
+    it 'sets the device to low' do
+      dev = gpio.output_device(2, initial_value: true)
+      dev.off
+      expect(dev.state).to be_falsey
+    end
+
+    it 'keeps the device low' do
+      dev = gpio.output_device(2, initial_value: false)
+      dev.off
+      expect(dev.state).to be_falsey
+    end
+  end
 end
