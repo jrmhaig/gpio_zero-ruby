@@ -1,5 +1,6 @@
 require 'ffi'
 require 'gpio_zero/output_device'
+require 'gpio_zero/digital_output_device'
 require 'gpio_zero/LED'
 
 class GpioZero
