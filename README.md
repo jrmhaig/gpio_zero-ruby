@@ -50,18 +50,7 @@ bundle exec ruby test.rb
 
 ## Current features
 
-Start using GPIO Zero:
-
-```
-gpio = GpioZero.new
-```
-
-Set a pin with default on or off:
-
-```
-output_pin_on  = gpio.output_device(4, initial_value: true)
-output_pin_off = gpio.output_device(5, initial_value: false)
-```
+* LED, on and off
 
 ## To do
 
@@ -69,7 +58,7 @@ Essentially, everything that exists in the Python GPIO Zero library, but in the
 short term the following features appear in the 'Basic Recipes' section of the
 documentation, ordered in (approximate) order of priority:
 
-* LED; Done; `on` and `off`
+* Other LED features. Eg, blink.
 * Button
 * PWMLED
 * Buzzer
