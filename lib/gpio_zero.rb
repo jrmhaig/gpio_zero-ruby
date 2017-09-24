@@ -1,5 +1,6 @@
 require 'ffi'
 require 'gpio_zero/output_device'
+require 'gpio_zero/LED'
 
 class GpioZero
   def initialize driver: :pi_gpio
@@ -10,5 +11,9 @@ class GpioZero
 
   def output_device pin, options = {}
     GpioZero::OutputDevice.new pin, @pins, options
+  end
+
+  def LED pin, options = {}
+    GpioZero::LED.new pin, @pins, options
   end
 end
