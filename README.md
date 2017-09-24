@@ -69,7 +69,7 @@ Essentially, everything that exists in the Python GPIO Zero library, but in the
 short term the following features appear in the 'Basic Recipes' section of the
 documentation, ordered in (approximate) order of priority:
 
-* LED
+* LED; Done; `on` and `off`
 * Button
 * PWMLED
 * Buzzer
