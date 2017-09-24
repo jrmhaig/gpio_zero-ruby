@@ -56,11 +56,11 @@ Start using GPIO Zero:
 gpio = GpioZero.new
 ```
 
-Set a pin with default on (1) or off (0):
+Set a pin with default on or off:
 
 ```
-output_pin_on  = gpio.output_device(4, initial_value: 1)
-output_pin_off = gpio.output_device(5, initial_value: 0)
+output_pin_on  = gpio.output_device(4, initial_value: true)
+output_pin_off = gpio.output_device(5, initial_value: false)
 ```
 
 ## To do
