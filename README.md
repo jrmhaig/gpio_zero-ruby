@@ -44,6 +44,10 @@ bundle install
 bundle exec ruby test.rb
 ```
 
+## Documentation
+
+* [Basic recipes](doc/basic_recipes.md)
+
 ## Current features
 
 Start using GPIO Zero:
