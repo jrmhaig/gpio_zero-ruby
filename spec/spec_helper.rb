@@ -1,7 +1,8 @@
 $LOAD_PATH << File.expand_path('spec/lib')
 
-RSpec.configure do |config|
+GPIO_PINS = ENV['GPIO_PINS'] || 'mock'
 
+RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end

@@ -1,7 +1,7 @@
 require 'gpio_zero'
 
 RSpec.describe GpioZero do
-  let(:gpio) { GpioZero.new driver: :mock }
+  let(:gpio) { GpioZero.new driver: GPIO_PINS }
 
   describe '#output_device' do
     it 'creates an OutputDevice' do
