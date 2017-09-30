@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'gpio_zero/pins/pi_gpio'
+
+pi = GpioZero::Pins::PiGpio.new
+
+puts "Pi revision: #{pi.revision}"
