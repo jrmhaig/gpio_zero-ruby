@@ -25,11 +25,16 @@ class GpioZero
         (_gpio_read @pi, pin) == 1
       end
 
+      def revision
+        _get_hardware_revision @pi
+      end
+
       private
       attach_function :_pigpio_start, :pigpio_start, [ :string, :string ], :int
       attach_function :_set_mode, :set_mode, [ :int, :int, :int ], :int
       attach_function :_gpio_write, :gpio_write, [ :int, :int, :int ], :int
       attach_function :_gpio_read, :gpio_write, [ :int, :int ], :int
+      attach_function :_get_hardware_revision, :get_hardware_revision, [ :int ], :int
     end
   end
 end
