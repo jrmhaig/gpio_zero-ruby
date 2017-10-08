@@ -1,6 +1,8 @@
 $LOAD_PATH << File.expand_path('spec/lib')
 
 GPIO_PINS = ENV['GPIO_PINS'] || 'mock'
+# Settings for the pins mock class
+MOCK_REVISION=16
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
