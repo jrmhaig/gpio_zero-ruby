@@ -16,6 +16,10 @@ class GpioZero
       def read pin
         @states[pin]
       end
+
+      def revision
+        MOCK_REVISION
+      end
     end
   end
 end

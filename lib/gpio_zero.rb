@@ -1,4 +1,5 @@
 require 'ffi'
+require 'gpio_zero-constants'
 require 'gpio_zero/output_device'
 require 'gpio_zero/digital_output_device'
 require 'gpio_zero/LED'
@@ -8,6 +9,10 @@ class GpioZero
     require "gpio_zero/pins/#{driver}"
     pin_class = 'GpioZero::Pins::' + driver.to_s.split('_').collect(&:capitalize).join
     @pins = Object.const_get(pin_class).new
+  end
+
+  def data
+    GpioZero::PI_REVISIONS[@pins.revision]
   end
 
   def output_device pin, options = {}
